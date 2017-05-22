@@ -3,8 +3,11 @@ FROM phusion/baseimage
 # Install packages
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y git
-RUN apt-get install -y nodejs
-RUN apt-get install -y npm
+
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+RUN nvm install v6.2.1
+RUN nvm use v6.2.1
+
 RUN npm install -g pm2
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
