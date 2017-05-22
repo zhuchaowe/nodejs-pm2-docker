@@ -1,5 +1,7 @@
 FROM phusion/baseimage
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Install packages
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y git
