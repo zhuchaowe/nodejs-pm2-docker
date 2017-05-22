@@ -6,11 +6,10 @@ RUN apt-get install -y git
 # 配置环境变量
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 6.2.1
-ENV WORK_DIR /workspace
  
 # 下载和配置Node.js环境
 # 这些命令一定要写在一起, 否则`nvm`命令会找不到
-RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash \
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash \
     && source $NVM_DIR/nvm.sh \
     && nvm install v$NODE_VERSION \
     && nvm use v$NODE_VERSION \
