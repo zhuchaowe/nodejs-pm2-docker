@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y upgrade
 
 # 配置环境变量
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 6.2.1
+ENV NODE_VERSION 10.2.0
  
 # 下载和配置Node.js环境
 # 这些命令一定要写在一起, 否则`nvm`命令会找不到
